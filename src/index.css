@@ -1,0 +1,356 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+ 
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+ 
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+ 
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+ 
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+ 
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+ 
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .section-container {
+    @apply container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+  }
+  
+  .heading-xl {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight;
+  }
+  
+  .heading-lg {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+  
+  .heading-md {
+    @apply text-2xl sm:text-3xl font-bold leading-tight;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-600;
+  }
+
+  /* Apple-inspired design system */
+  .apple-glass {
+    @apply bg-white/80 backdrop-blur-md border border-gray-200/50 rounded-2xl;
+  }
+  
+  .apple-card {
+    @apply bg-[#f5f5f7] rounded-2xl overflow-hidden;
+  }
+  
+  .apple-black {
+    @apply bg-black text-white;
+  }
+  
+  .apple-button {
+    @apply bg-[#0071e3] text-white rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 hover:bg-[#0077ed];
+  }
+  
+  .apple-headline {
+    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight;
+  }
+  
+  .apple-subheadline {
+    @apply text-xl md:text-2xl font-medium text-gray-500;
+  }
+
+  /* Custom carousel styles */
+  .feature-carousel-item {
+    @apply transition-all duration-300 ease-apple;
+  }
+  
+  .feature-card {
+    @apply h-full bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300;
+  }
+  
+  .feature-icon {
+    @apply w-16 h-16 flex items-center justify-center rounded-xl shadow-sm;
+  }
+}
+
+/* Custom styles for flip card */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Animation for fade-in */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apple-style animations */
+.apple-appear {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: appleAppear 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes appleAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.apple-appear-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.apple-appear-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.apple-appear-delay-3 {
+  animation-delay: 0.6s;
+}
+
+/* Improved gradient for backgrounds */
+.gradient-bg {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,247,1) 100%);
+}
+
+.dark-gradient-bg {
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(30,30,30,1) 100%);
+}
+
+/* Custom carousel dots */
+.carousel-dots {
+  @apply flex justify-center gap-2 mt-6;
+}
+
+.carousel-dot {
+  @apply w-2.5 h-2.5 rounded-full bg-gray-300 transition-all duration-300;
+}
+
+.carousel-dot.active {
+  @apply bg-apple-blue w-8;
+}
+
+/* JSON data display styling */
+.json-display {
+  @apply font-mono text-sm bg-gray-50 p-4 rounded-lg border border-gray-200 overflow-auto;
+}
+
+.json-key {
+  @apply text-blue-600 font-medium;
+}
+
+.json-value {
+  @apply text-green-600;
+}
+
+.json-string {
+  @apply text-red-500;
+}
+
+.json-number {
+  @apply text-purple-600;
+}
+
+.json-boolean {
+  @apply text-amber-600 font-semibold;
+}
+
+.json-null {
+  @apply text-gray-500 italic;
+}
+
+/* Code block styling */
+.code-block {
+  @apply font-mono text-sm bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto;
+}
+
+/* Tab content styling improvements */
+.tab-content {
+  @apply p-6 h-full overflow-auto;
+}
+
+/* Improved card styling */
+.data-card {
+  @apply bg-white rounded-xl p-5 shadow-sm border border-gray-100;
+}
+
+/* Results page specific styles */
+.results-panel {
+  @apply h-full flex flex-col;
+}
+
+.results-content {
+  @apply flex-grow overflow-hidden;
+}
+
+/* Document viewer styles */
+.document-viewer {
+  @apply font-sans text-gray-800 leading-relaxed;
+}
+
+.document-viewer h1, 
+.document-viewer h2, 
+.document-viewer h3 {
+  @apply font-semibold mb-3 mt-5;
+}
+
+.document-viewer p {
+  @apply mb-4;
+}
+
+.document-viewer pre {
+  @apply bg-gray-50 p-3 rounded my-3 overflow-auto border border-gray-200;
+}
+
+.document-viewer code {
+  @apply font-mono text-sm bg-gray-50 px-1 py-0.5 rounded border border-gray-200;
+}
+
+/* Make tab triggers more Apple-like */
+.apple-tabs-trigger {
+  @apply rounded-full px-5 py-2 text-sm font-medium transition-colors;
+}
+
+/* PrepDeck Markdown Styles */
+.prepdeck-content {
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 1rem;
+}
+
+.prepdeck-content h1 {
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem;
+  font-weight: 700;
+  border-bottom: 3px solid #6E59A5;
+  padding-bottom: 0.5rem;
+  color: #1A1F2C;
+  letter-spacing: -0.02em;
+}
+
+.prepdeck-content h2 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+  color: #6E59A5;
+  position: relative;
+  padding-left: 15px;
+  border-left: 4px solid #7E69AB;
+}
+
+.prepdeck-content p {
+  margin: 0.75rem 0;
+  color: #403E43;
+  line-height: 1.7;
+}
+
+.prepdeck-content ul {
+  margin: 0.75rem 0 0.75rem 1.5rem;
+  list-style-type: disc;
+}
+
+.prepdeck-content ul ul {
+  margin-left: 1.5rem;
+  list-style-type: circle;
+}
+
+.prepdeck-content li {
+  margin: 0.4rem 0;
+  color: #403E43;
+}
+
+.prepdeck-content h1:hover,
+.prepdeck-content h2:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}

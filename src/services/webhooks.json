@@ -1,0 +1,41 @@
+{
+  "pdf_webhooks": [
+    "https://hook.eu2.make.com/68sxm0od45fjelr0wg2zuos7q63difj8",
+    "https://hook.eu2.make.com/omelxsl5cvdumrxsa4l9rhgiaca5v8ga",
+    "https://hook.eu2.make.com/eg5wbgkvftfhhh8lfep9ueiqvifegfej",
+    "https://hook.eu2.make.com/x18ia4po91d8io4ju14pe48g7deyu4b3",
+    "https://hook.eu2.make.com/t8a3rxpblyecdd38h1fplo3bnex5ys7u",
+    "https://hook.eu2.make.com/n5m4r8u4olptw6eyegfilwfijeqaukgu"
+  ],
+  "url_webhooks": [
+    "https://hook.eu2.make.com/lw5aux7xmiiazl12t7d7fi7kq8ig6p5s",
+    "https://hook.eu2.make.com/8msktgmdbzvmurpkapet2cybly77b7m7",
+    "https://hook.eu2.make.com/uu2zta52l0ol5fg688mozklvrxe6lv2m",
+    "https://hook.eu2.make.com/t362puvs6cmdqjacobthvqxii4liprk7",
+    "https://hook.eu2.make.com/fjwwggv19dmzbql813hc5si4wiakiwx8"
+  ],
+  "module_webhook_urls": {
+    "primary": "https://hook.eu2.make.com/68sxm0od45fjelr0wg2zuos7q63difj8",
+    "secondary": [
+      "https://hook.eu2.make.com/omelxsl5cvdumrxsa4l9rhgiaca5v8ga",
+      "https://hook.eu2.make.com/eg5wbgkvftfhhh8lfep9ueiqvifegfej",
+      "https://hook.eu2.make.com/x18ia4po91d8io4ju14pe48g7deyu4b3",
+      "https://hook.eu2.make.com/t8a3rxpblyecdd38h1fplo3bnex5ys7u"
+    ]
+  },
+  "env_webhooks": {
+    "primary_webhook_url": "https://hook.eu2.make.com/68sxm0od45fjelr0wg2zuos7q63difj8",
+    "secondary_webhook_url": "https://hook.eu2.make.com/omelxsl5cvdumrxsa4l9rhgiaca5v8ga"
+  },
+  "feature_webhooks": {
+    "chat_webhook_url": "https://hook.eu2.make.com/n5m4r8u4olptw6eyegfilwfijeqaukgu"
+  },
+  "webhook_status": {
+    "https://hook.eu2.make.com/n5m4r8u4olptw6eyegfilwfijeqaukgu": {
+      "feature": "PDF Chat",
+      "status": "inactive",
+      "last_checked": "2023-07-07T12:00:00Z",
+      "notes": "Returns 500 error: Scenario failed to complete"
+    }
+  }
+} 

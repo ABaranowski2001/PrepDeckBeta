@@ -1,0 +1,63 @@
+{
+  "pdf_features": [
+    {
+      "feature": "Summary",
+      "tab_name": "Summary",
+      "supabase_table": "PDF Summary",
+      "data_column": "Summary",
+      "hook": "Direct fetch in PDFResults.tsx",
+      "hook_file": "src/pages/PDFResults.tsx",
+      "context_module": "SummaryModule",
+      "description": "Displays the summarized content of the PDF"
+    },
+    {
+      "feature": "Cards",
+      "tab_name": "Cards",
+      "supabase_table": "PDF Cards",
+      "data_column": "Cards",
+      "hook": "useFetchUserCards",
+      "hook_file": "src/hooks/useFetchUserCards.ts",
+      "context_module": "CardsModule",
+      "description": "Provides flashcards for memorization of key content"
+    },
+    {
+      "feature": "Quiz",
+      "tab_name": "Test",
+      "supabase_table": "PDF Quiz",
+      "data_column": "Quiz",
+      "hook": "useFetchUserQuiz",
+      "hook_file": "src/hooks/useFetchUserQuiz.ts",
+      "context_module": "QuizModule",
+      "description": "Provides interactive quiz questions based on the content"
+    },
+    {
+      "feature": "Videos",
+      "tab_name": "Watch",
+      "supabase_table": "PDF Video",
+      "data_column": "Video",
+      "hook": "useFetchUserVideos",
+      "hook_file": "src/hooks/useFetchUserVideos.ts",
+      "context_module": "VideosModule",
+      "description": "Shows educational videos related to the content"
+    },
+    {
+      "feature": "Read",
+      "tab_name": "Read",
+      "supabase_table": "PDF Read",
+      "data_column": "Read",
+      "hook": "useFetchUserRead",
+      "hook_file": "src/hooks/useFetchUserRead.ts",
+      "context_module": "ReadModule",
+      "description": "Provides academic reading materials related to the content"
+    }
+  ],
+  "query_parameters": {
+    "primary_key": "User_ID",
+    "secondary_key": "File Name"
+  },
+  "hook_pattern": {
+    "fetch_pattern": "async supabase.from(TABLE_NAME).select(COLUMN_NAME).eq(PRIMARY_KEY, user.id).eq(SECONDARY_KEY, currentFile.name)",
+    "state_variables": ["data", "isLoading", "error", "title"],
+    "lifecycle": "Fetches on component mount and when user ID or file name changes"
+  }
+} 
